@@ -1,0 +1,7 @@
+medias = {
+	{ id = "media1", src="media/media1.mp4" },
+	{ id = "media2", src="media/media2.mp4" },
+	{ id = "media3", src="media/media3.mp4" },
+	{ id = "media4", src="media/media3.mp4" }
+};
+
