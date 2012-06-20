@@ -1,5 +1,5 @@
-luatpl (Lua Templates Specification)
-===================================
+luatpl (Lua Inline Template Specification)
+=========================================
 This project enables Lua to be used as a imperative template specification
 language. This is similar to how PHP, ASP, JSP, etc. are integrated to HTML. 
 
