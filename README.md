@@ -20,7 +20,7 @@ print a value of a string we can use the notation [!=variable!].
 ### Usage
 In order to use the luatpl-imp you just need to run lua as following:
 
-	$ lua luatpl.lua template.ncl template.in
+	$ lua luatpl_main.lua template.ncl template.in
 
 ### Slides Show Example
 
