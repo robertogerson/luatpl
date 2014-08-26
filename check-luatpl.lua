@@ -23,7 +23,7 @@ function checkTemplateIn ()
 	local type;
 	local error = false;
 	for elementName, v in pairs(vocabulary) do
-		print("\nElement = "..elementName);
+		-- print("\nElement = "..elementName);
 		for t, value in pairs (v) do
 			if(t == "type") then
 				type = value;		

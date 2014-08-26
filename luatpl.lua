@@ -16,8 +16,9 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --]]
 
---
---
+-- Solves the luatpl template.
+-- @template_str Template specification (as string)
+-- @template_input Template input content (as string)
 function luatpl(template_str, template_input)
   local pattern = '%[%!=?.-%!%]'
   local found = ''
@@ -58,26 +59,25 @@ end
 
 -- Main function
 function main()
-
   -- read template file
-  print("### XTemplate based in Lua scripts built-in ###");
+  print("### Templates based in Lua scripts built-in ###");
   print("### Developed by Roberto Azevedo (robertogerson@telemidia.puc-rio.br) ###");
 
   print("\nRunning with \n# Template file  = "..arg[1].." and \n# Input file = "..arg[0]);
 
+  -- Open and read the template specification file.
   local file = io.open(arg[1]);
   local template_str = file:read("*all");
   file:close(file)
 
+  -- Open and read the template input file.
   file = io.open(arg[2])
   local template_input = file:read("*all")
   file:close()
 
-  -- print (template_str)
-  -- print (template_input)
-
   print("\tStep 1 from 3. Parsing template file ...");
 
+  -- calls the main function to solve luatpl template.
   local solved = luatpl ( template_str, template_input)
 
   print("\tStep 2 from 3. Validating input file...");
@@ -92,3 +92,4 @@ end
 
 -- Start the program
 main()
+
