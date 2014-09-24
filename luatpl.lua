@@ -16,10 +16,11 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --]]
 
+local luatpl = {}
 -- Solves the luatpl template.
 -- @template_str Template specification (as string)
 -- @template_input Template input content (as string)
-function luatpl(template_str, template_input)
+function luatpl:solve(template_str, template_input)
   local pattern = '%[%!=?.-%!%]'
   local found = ''
   local i = 0
@@ -29,7 +30,7 @@ function luatpl(template_str, template_input)
   local out = template_input
 
   --validation
-  out = out..'\n--validate\nrequire "check-luatpl"\n';
+   -- out = out..'\n--validate\nrequire "check-luatpl"\n';
   out = out..'output_str = ""\n'
   --out = out.."\nif(not checkXTemplateIn()) then exit() end\n\n";
 
@@ -57,3 +58,4 @@ function luatpl(template_str, template_input)
   return output_str
 end
 
+return luatpl
