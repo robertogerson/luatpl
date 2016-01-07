@@ -1,24 +1,23 @@
 luatpl (Lua Inline Template Specification)
 =========================================
-This project enables Lua to be used as a imperative template specification
+This project enables Lua to be used as an imperative template specification
 language. This is similar to how PHP, ASP, JSP, etc. are integrated to HTML. 
 
-In special, the use of Lua as base for imperative template specification
-and processing allowed us to use our solution to develop iDTV application
-based on  <a href="http://www.ginga.org.br">Ginga middleware</a>, even that
-live generated ones.
+Every code inside a `[!` and `!]` is handled as a Lua code. If we want just
+print a value of a string we can use the notation `[!=variable!]`.
 
-luatpl embeds Lua code inside any document. In our case, we have used it to
-embed Lua code inside an NCL document. Additionally, we have developed a
-script that receives a template file (with mixed some language and Lua code)
-and a filling file (also a Lua script) and results in a final and complete
-document.
+In particular, the use of Lua as base for template specification and processing
+allowed us to use our solution to develop iDTV application based on 
+<a href="http://www.ginga.org.br">Ginga middleware</a>, even that live
+generated ones.
 
-Every code inside a [! and !] is treated as a Lua code. Also, if we want just
-print a value of a string we can use the notation [!=variable!].
+luatpl embeds Lua code inside any document. As an example, we have used it to
+embed Lua code inside <a href="http://www.ncl.org">NCL</a> documents.
+Moreover, we have developed a script that receives a template file and a
+filling file (a Lua script) and results in a final and complete document.
 
 ### Usage
-In order to use the luatpl-imp you just need to run lua as following:
+In order to use the luatpl you just need to run lua as follows:
 
 	$ lua luatpl_main.lua template.ncl template.in
 
