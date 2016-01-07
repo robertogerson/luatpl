@@ -12,7 +12,7 @@ allowed us to use our solution to develop iDTV application based on
 generated ones.
 
 luatpl embeds Lua code inside any document. As an example, we have used it to
-embed Lua code inside <a href="http://www.ncl.org">NCL</a> documents.
+embed Lua code inside <a href="http://www.ncl.org.br">NCL</a> documents.
 Moreover, we have developed a script that receives a template file and a
 filling file (a Lua script) and results in a final and complete document.
 
