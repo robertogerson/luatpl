@@ -7,5 +7,11 @@
 
 [!=equals {"x", "y"}!]
 
-[!=seq {"x", "y", "z"} !]
+[!=seq {"x", "y", "ctx"} !]
+
+<context id="ctx">
+  <media id="a"/>
+  <media id="b"/>
+  <media id="c"/>
+</context>
 
