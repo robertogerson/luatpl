@@ -1,0 +1,35 @@
+function starts(t)
+  local i = 0
+  local out = '<!-- starts -->\n'
+  out = out..'<link xconnector="conn#onBeginStart">\n'
+
+  for k, v in pairs(t) do
+    if i == 0 then
+      out = out..'\t<bind role="onBegin" component="'..v..'"/>\n'
+    else
+      out = out..'\t<bind role="start" component="'..v..'"/>\n'
+    end
+    i = i+1
+  end
+
+  out = out..'</link>\n'
+  out = out..'<!-- end starts -->\n'
+  return out
+end
+
+function seq(t)
+  local prev = nil
+  local out = '<!-- seq -->\n'
+  for k, v in pairs(t) do
+    if prev ~= nil then
+      out = out .. '<link xconnector="conn#onEndStart">\n'
+      out = out .. '\t<bind role="onEnd" component="'..prev..'">\n'
+      out = out .. '\t<bind role="start" component="'..v..'">\n'
+      out = out .. '</link>\n'
+    end
+    prev = v
+  end
+  out = out .. '<!-- end seq -->'
+  return out
+end
+
