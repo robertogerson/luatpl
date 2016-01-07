@@ -1,9 +1,9 @@
 -- in
-mainvideo = { id="mainvideo", src="media/mainvideo.mp4" };
+mainvideo = { id="mainvideo", src="media/mainvideo.mp4" }
 
 subtitle = {
-	{ id = "sub01", src = "media/sub01.txt", begin = "0s", ends = "3s" },
-	{ id = "sub02", src = "media/sub02.txt", begin = "3s", ends = "5s" },
-	{ id = "sub03", src = "media/sub02.txt", begin = "3s", ends = "5s" }
-};
+  { id = "sub01", src = "media/sub01.txt", begin = "0s", ends = "3s" },
+  { id = "sub02", src = "media/sub02.txt", begin = "3s", ends = "5s" },
+  { id = "sub03", src = "media/sub02.txt", begin = "3s", ends = "5s" }
+}
 -- problema: end é palavra reservada de Lua.

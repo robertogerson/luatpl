@@ -1,3 +1,3 @@
 <media>
-	<property name="bounds" value="[!=bounds!]"/>
+  <property name="bounds" value="[!=bounds!]"/>
 </media>
