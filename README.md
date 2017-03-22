@@ -1,20 +1,16 @@
 luatpl (Lua Inline Template Specification)
 =========================================
-This project enables Lua to be used as an imperative template specification
-language. This is similar to how PHP, ASP, JSP, etc. are integrated to HTML. 
 
-Every code inside a `[!` and `!]` is handled as a Lua code. If we want just
+This project enables Lua to be used as an imperative template specification
+language.  This is similar to how PHP, ASP, JSP, etc. are integrated to HTML. 
+
+Every code inside a `[!` and `!]` is handled as a Lua code.  If we just want to
 print a value of a string we can use the notation `[!=variable!]`.
 
 In particular, the use of Lua as base for template specification and processing
 allowed us to use our solution to develop iDTV application based on 
 <a href="http://www.ginga.org.br">Ginga middleware</a>, even that live
 generated ones.
-
-luatpl embeds Lua code inside any document. As an example, we have used it to
-embed Lua code inside <a href="http://www.ncl.org.br">NCL</a> documents.
-Moreover, we have developed a script that receives a template file and a
-filling file (a Lua script) and results in a final and complete document.
 
 ### Usage
 In order to use the luatpl you just need to run lua as follows:
@@ -43,7 +39,7 @@ must inform only the list of medias that must be played in sequence.
 	</body>
 
 
-#### Filling file example
+#### The data model file example
 	
 	medias = {
 		{ id = "media1", src="media/media1.mp4" },
