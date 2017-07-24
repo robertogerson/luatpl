@@ -31,7 +31,7 @@ must inform only the list of medias that must be played in sequence.
 		
 		[!for i=2,#medias do!]
 		<media id="[!=medias[i].id!]" src="[!=medias[i].src!]"/>
-		<link id="[!= !]" xconnector="onEndStart">
+		<link xconnector="onEndStart">
 			<bind component="[!=medias[i-1].id!]" role="onEnd"/>
 			<bind component="[!=medias[i].id!]" role="start"/>
 		</link>
