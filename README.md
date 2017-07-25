@@ -15,7 +15,11 @@ generated ones.
 ### Usage
 In order to use the luatpl you just need to run lua as follows:
 
-	$ lua luatpl_main.lua template.ncl template.in
+	$ lua luatpl_main.lua TEMPLATE DATAMODEL
+
+in which `template.ncl` is the path for a luatpl template file and DATAMODEL is
+the data model specification file (any .lua program can be used as a data model).
+The next section shows a simple example of a luatpl template and a data model file.
 
 ### Slides Show Example
 
