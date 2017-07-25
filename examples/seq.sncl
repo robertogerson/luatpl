@@ -1,0 +1,16 @@
+port port1 [!=medias[1].id!]
+
+media [!=medias[1].id!]
+  src = "[!=medias[1].src!]"
+end
+
+[!for i=2,#medias do!]
+media [!=medias[i].id!]
+  src = "[!=medias[i].src!]"
+end
+
+onEnd [!=medias[i-1].id!] do
+  start [!=medias[i].id!] end
+end
+[!end!]
+
