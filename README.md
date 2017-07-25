@@ -1,14 +1,14 @@
-luatpl (Lua Inline Template Specification)
-=========================================
+luatpl
+======
 
-This project enables Lua to be used as an imperative template specification
-language.  This is similar to how PHP, ASP, JSP, etc. are integrated to HTML. 
+luatpl enables Lua to be used as an imperative template specification language.
+This is similar to how PHP, ASP, JSP, etc. are integrated to HTML. 
 
 Every code inside a `[!` and `!]` is handled as a Lua code.  If we just want to
 print a value of a string we can use the notation `[!=variable!]`.
 
-In particular, the use of Lua as basis for template specification and processing
-allowed us to use our solution to develop iDTV application based on 
+In particular, the use of Lua as basis for template specification and
+processing allowed us to use our solution to develop iDTV application based on
 <a href="http://www.ginga.org.br">Ginga middleware</a>, even that live
 generated ones.
 
