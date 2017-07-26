@@ -43,7 +43,7 @@ must inform only the list of media objects that must be played in sequence.
   </link>
 [!end!]
 </body>
-
+```
 
 #### The data model file example
 
