@@ -17,6 +17,7 @@
 --]]
 
 local luatpl = {}
+
 -- Solves the luatpl template.
 -- @template_str Template specification (as string)
 -- @template_input Template input content (as string)

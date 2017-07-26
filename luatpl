@@ -1,3 +1,4 @@
+#!/usr/bin/env lua
 --[[
   luatpl allows you to embed Lua scripts to produce text files.
    Copyright (C) 2009,2014 Bruno Lima, Carlos de Salles and Roberto Azevedo
