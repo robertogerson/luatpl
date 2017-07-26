@@ -31,25 +31,25 @@ must inform only the list of media objects that must be played in sequence.
 #### Template File
 	
 	<body>
-		<port id="port1" component="[!=media[1].id!]" />
-		<media id="[!=media[1].id!]" src="[!=media[1].src!]"/>
+	  <port id="port1" component="[!=media[1].id!]" />
+	  <media id="[!=media[1].id!]" src="[!=media[1].src!]"/>
 		
-		[!for i=2,#media do!]
-		<media id="[!=media[i].id!]" src="[!=media[i].src!]"/>
-		<link xconnector="onEndStart">
-			<bind component="[!=media[i-1].id!]" role="onEnd"/>
-			<bind component="[!=media[i].id!]" role="start"/>
-		</link>
-		[!end!]
+	  [!for i=2,#media do!]
+	  <media id="[!=media[i].id!]" src="[!=media[i].src!]"/>
+	  <link xconnector="onEndStart">
+	    <bind component="[!=media[i-1].id!]" role="onEnd"/>
+	    <bind component="[!=media[i].id!]" role="start"/>
+	  </link>
+	  [!end!]
 	</body>
 
 
 #### The data model file example
 	
 	media = {
-		{ id = "media1", src="media/media1.mp4" },
-		{ id = "media2", src="media/media2.mp4"},
-		{ id = "media3", src="media/media3.mp4" },
-		{ id = "media4", src="media/media3.mp4" }
+	  { id = "media1", src="media/media1.mp4" },
+	  { id = "media2", src="media/media2.mp4"},
+	  { id = "media3", src="media/media3.mp4" },
+	  { id = "media4", src="media/media3.mp4" }
 	};
 
